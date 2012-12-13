@@ -1,2 +1,7 @@
-{:aot-filter {:plugins [[lein-aot-filter "0.1.0-SNAPSHOT"]]
-              :eval-in-leiningen false}}
+{:release
+ {:plugins [[lein-set-version "0.2.1"]]
+  :set-version
+  {:updates [{:path "README.md"
+              :no-snapshot true
+              :search-regex
+              #"lein-aot-filter \"\d+\.\d+\.\d+\""}]}}}
